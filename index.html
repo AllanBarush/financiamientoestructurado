@@ -34,6 +34,18 @@ ul.temas li::before{content:"";position:absolute;left:0;top:24px;width:9px;heigh
 .cross{margin-top:34px;border:1px solid var(--rule);background:var(--card);padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 .cross .t{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:16px}
 .cross .s{font-style:italic;color:var(--soft);font-size:14px;margin-top:4px}
+.blk{margin-top:46px}
+.ficha.cal{grid-template-columns:repeat(6,1fr);margin-top:18px}
+.f .w{font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--title);font-weight:600;margin-bottom:6px}
+@media(max-width:700px){.ficha.cal{grid-template-columns:repeat(3,1fr)}}
+.cross .btn{padding:13px 24px}
+.fc{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start;border:1px solid var(--rule);background:var(--card);padding:28px 30px;margin-top:30px}
+.fc img{width:100%;height:auto;aspect-ratio:504/801;object-fit:cover;display:block;border:1px solid var(--rule)}
+.fc .fn{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:22px;line-height:1.2}
+.fc .fr{font-family:'Poppins',Arial,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acc);margin:8px 0 2px;font-weight:600}
+.fc .fi{font-family:'Poppins',Arial,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--soft);margin-bottom:16px;font-weight:500}
+.fc p{font-size:15.5px;color:var(--ink);margin-top:12px}
+@media(max-width:700px){.fc{grid-template-columns:1fr;padding:24px 20px}.fc img{max-width:220px}}
 footer{background:var(--bg2);color:var(--soft);padding:36px 24px;text-align:center;font-family:'Poppins',Arial,sans-serif;font-size:12px;line-height:2;border-top:1px solid var(--rule)}
 footer a{color:var(--acc);text-decoration:none}
 </style>
@@ -124,7 +136,34 @@ footer a{color:var(--acc);text-decoration:none}
   <div class="f"><div class="n">5 Nov</div><div class="l">Inicio · 2026</div></div>
   <div class="f"><div class="n">MXN $45,000 + TAX</div><div class="l">Inversión</div></div>
  </div>
- 
+
+ <div class="kicker blk">Calendario · noviembre 2026</div>
+ <div class="ficha cal">
+  <div class="f"><div class="w">Jueves</div><div class="n">5 Nov</div><div class="l">Sesión 1</div></div>
+  <div class="f"><div class="w">Lunes</div><div class="n">9 Nov</div><div class="l">Sesión 2</div></div>
+  <div class="f"><div class="w">Martes</div><div class="n">10 Nov</div><div class="l">Sesión 3</div></div>
+  <div class="f"><div class="w">Jueves</div><div class="n">12 Nov</div><div class="l">Sesión 4</div></div>
+  <div class="f"><div class="w">Lunes</div><div class="n">16 Nov</div><div class="l">Sesión 5</div></div>
+  <div class="f"><div class="w">Martes</div><div class="n">17 Nov</div><div class="l">Sesión 6</div></div>
+ </div>
+ <div class="cross">
+  <div><div class="t">Horario: 19:00 a 21:00, hora de la Ciudad de México</div><div class="s">Seis sesiones de 2 horas en Virtual Live, del jueves 5 al martes 17 de noviembre de 2026.</div></div>
+  <a class="btn btn-ghost" id="rm-folleto" href="folleto.pdf" target="_blank" rel="noopener">Descargar folleto</a>
+ </div>
+</div></section>
+
+<section class="sec" id="expositora"><div class="wrap">
+ <div class="kicker">Expositora</div><h2 class="sec-title">Quién lo imparte.</h2>
+ <div class="fc">
+  <img src="img/lorena-barrientos.jpg" alt="Lorena Barrientos" width="504" height="801" loading="lazy">
+  <div>
+   <div class="fn">Lorena Barrientos</div>
+   <div class="fr">Chief Financial Officer</div>
+   <div class="fi">Xinfra FE</div>
+   <p>Su trayectoria reúne finanzas corporativas, tesorería y planeación financiera en instituciones públicas y privadas del sistema financiero mexicano. Ha ocupado responsabilidades en Banobras, Metrofinanciera, HiTo Servicing, Monex e IPAB.</p>
+   <p>Al frente de las finanzas de Xinfra FE, su perfil conecta la gestión financiera institucional con el ecosistema de inversión en infraestructura. Una perspectiva pertinente para analizar cómo se relacionan proyectos, estructuras y capital.</p>
+  </div>
+ </div>
 </div></section>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
@@ -159,7 +198,7 @@ footer a{color:var(--acc);text-decoration:none}
  <option value="" disabled selected></option>
  <option value="individual">Inscripción individual</option>
  <option value="grupo">Grupo o delegación</option>
- <option value="licencia_corporativa">Licencia / cohorte corporativa</option>
+ <option value="licencia_corporativa">Licencia / grupo corporativo</option>
  </select>
  <small style="display:block;margin-top:7px;color:#93A0B4;font-family:'Lora',Georgia,serif;font-size:11.5px;">Para inscripción individual, empresa, puesto y sector son opcionales.</small>
  </div>
@@ -227,7 +266,7 @@ footer a{color:var(--acc);text-decoration:none}
  <div style="margin-top:34px;padding-top:28px;border-top:1px solid #edf0f5;text-align:center;">
  <div style="font-size:10px;color:#93A0B4;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
  <div style="font-size:30px;font-weight:300;color:#0A2136;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $45,000 <span style="font-size:15px;font-weight:400;color:#9aa4b4;letter-spacing:.5px;">+ TAX</span></div>
- <div style="font-size:11px;color:#9aa4b4;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">MXN $45,000 · 6 sesiones · 12 horas</div>
+ <div style="font-size:11px;color:#9aa4b4;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">MXN $45,000 + TAX · 6 sesiones · 12 horas</div>
  <div style="display:grid;gap:10px;">
  <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=financiamientoestructurado" target="_blank" rel="noopener" style="background:#0D8A8A;color:#ffffff;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
  <a id="rm-stripe" href="https://buy.stripe.com/9B66oz6flaKYf33bbj2RB0b" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #0A2136;color:#0A2136;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
@@ -244,7 +283,7 @@ footer a{color:var(--acc);text-decoration:none}
 <div style="max-width:720px;margin:0 auto;border:1px solid rgba(128,128,128,.35);border-radius:8px;padding:34px 30px;">
 <div style="font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;opacity:.75;">Para tu institución</div>
 <h3 style="font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:22px;margin:10px 0 8px;">¿Este programa in-company?</h3>
-<p style="font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.65;margin:0 0 24px;opacity:.9;">Agenda 20 minutos con desarrollo de negocio y arma la cohorte para tu equipo: fechas, formato presencial o Virtual Live y propuesta económica.</p>
+<p style="font-family:'Lora',Georgia,serif;font-size:15px;line-height:1.65;margin:0 0 24px;opacity:.9;">Agenda 20 minutos con desarrollo de negocio y arma el grupo para tu equipo: fechas, formato presencial o Virtual Live y propuesta económica.</p>
 <form id="rm-incompany-form" onsubmit="return rmInCompany(event)" style="display:grid;gap:16px;">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
 <input name="nombre" placeholder="Nombre" required autocomplete="given-name" style="width:100%;box-sizing:border-box;background:transparent;border:none;border-bottom:1px solid rgba(128,128,128,.55);padding:10px 2px;font-size:15px;color:inherit;font-family:'Lora',Georgia,serif;outline:none;">
@@ -274,7 +313,7 @@ footer a{color:var(--acc);text-decoration:none}
 <!-- ===== /RM IN-COMPANY ===== -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
 <script>
-const RM_CFG={id:"financiamientoestructurado",folleto:"",paypal:"https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=financiamientoestructurado",stripe:"https://buy.stripe.com/9B66oz6flaKYf33bbj2RB0b"};
+const RM_CFG={id:"financiamientoestructurado",folleto:"https://financiamientoestructurado.riskmathics.com/folleto.pdf",paypal:"https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=financiamientoestructurado",stripe:"https://buy.stripe.com/9B66oz6flaKYf33bbj2RB0b"};
 const RM_VURL="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/verify-lead";
 const RM_VKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmZmRzZ3ZnY3Ztb2pvYmZpdWF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTQ0NzQsImV4cCI6MjA5MDk3MDQ3NH0.7VKn7st3POLRTLIXx9Y4gRjXbh8v_BKXblc7vFIVu-U";
 let RM_LEAD=null;var rmIti=null;
